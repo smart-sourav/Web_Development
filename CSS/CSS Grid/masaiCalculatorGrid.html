@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Masai Calculator</title>
+    <style>
+        #number{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            margin: 10px;
+            gap: 5px;
+            padding-left: 15px;
+        }
+        #number>div:nth-child(4),
+        #number>div:nth-child(8),
+        #number>div:nth-child(12),
+        #number>div:nth-child(15),
+        #number>div:nth-child(16){
+            background-color: black;
+            color: aliceblue;
+        }
+        #number>div:nth-child(13){
+            background-color: red;
+            color: aliceblue;
+        }
+        #number>div{
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            width: 25px;
+            height: 25px;
+        }
+        #container{
+            padding-bottom: 10px;
+            max-width: 30%;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        h2{
+            text-align: center;
+            color: #348081;
+            margin-top: 20px;
+            padding-top: 20px;
+        }
+        #calculator{
+            text-align: center;
+        }
+        input{
+            max-width: 100%;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h2>Masai Calculator</h2>
+        <div id="calculator">
+            <div><input type="text"></div>
+            <div id="number">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>+</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>-</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>*</div>
+                <div>c</div>
+                <div>0</div>
+                <div>=</div>
+                <div>/</div>
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>

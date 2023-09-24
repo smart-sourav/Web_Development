@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Example-2</title>
+</head>
+<body>
+    <div id="container">
+
+    </div>
+    <script>
+        let data = [];
+        let container = document.getElementById("container");
+        fetch("https://fakestoreapi.com/products")
+           .then(function(resolve){
+            return resolve.json();
+            })
+           .then(function(resolve){
+             data = resolve.data;
+            console.log("------>",data);
+            console.log(resolve)
+            showData(resolve)
+            })
+           .catch(function(error){
+            console.error(error)
+            })
+
+         function showData(data){
+          data.forEach(ele => {
+            let div = document.createElement("div");
+            let title = document.createElement("p")
+            title.textContent = ele.title;
+            let price = document.createElement("p");
+            price.innerText = ele.price;
+            let description = document.createElement("p");
+            description.innerText = ele.description;
+            let category = document.createElement("p")
+            category.innerText = ele.category;
+            div.append(title, price, description, category);
+            container.append(div);
+
+
+          });
+         }   
+
+
+    </script>
+</body>
+</html>

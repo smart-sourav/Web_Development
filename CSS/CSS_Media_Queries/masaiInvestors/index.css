@@ -1,0 +1,30 @@
+#logo{
+    display: flex;
+}
+h2{
+    text-align: center;
+}
+#investors{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, auto);
+    gap: 10px;
+}
+#investors>div{
+    text-align: center;
+}
+@media all and (max-width: 770px){
+    #investors{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(10, 200px);
+    }
+}
+@media all and (min-width: 771px) and (max-width: 1025px){
+    #investors{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(7, 200px);
+    }
+}
+#investors>div>div>img{
+    max-width: 100%;
+}

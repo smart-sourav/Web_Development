@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // let smallCase = "abcdefghijklmnopqrstuvwxyz";
+    // let upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    // let obj = []
+    // for(let i=0; i<upperCase.length; i++){
+    //     obj[upperCase[i]] = smallCase[i];
+    // }
+    // // console.log(obj);
+    // let str = ["SO", "U", "R", "AV"];
+    // let bag1 = "";
+
+
+    // for(let i=0; i<str.length; i++){
+    //   bag1 = bag1 + str[i];
+    // }
+    
+
+    // let bag = [];
+    // function convertCharacter(){
+    //     for(let i=0; i<bag1.length; i++){
+    //         for(let key in obj){
+    //         if(bag1[i] == key){
+    //             bag = bag + obj[key];
+    //         }
+    //     }
+    //     }
+    //     console.log(bag)
+        
+    // }
+    // convertCharacter();
+    
+     
+     let arr = ["MA", "SA", "I", "SCH", "OOL"];
+     let convertCharacter = (arr) => {
+       let bag =[];
+       arr.map((ele)=>{
+       bag.push(ele.toLowerCase());
+     })
+     console.log(bag)
+     }
+    
+     convertCharacter(arr);
+</script>
+</html>

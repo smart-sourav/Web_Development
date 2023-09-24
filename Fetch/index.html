@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    #container > div{
+        border: 1px solid black;
+        height: 300px;
+        width: 300px;
+    }
+</style>
+<body>
+    <div id="container">
+
+    </div>
+    
+</body>
+<script>
+    let container = document.getElementById("container");
+    
+    let data = [];
+    fetch("https://reqres.in/api/users")
+     .then(function(resolve){
+        return resolve.json();
+     })
+     .then(function(resolve){
+        data = resolve.data;
+        console.log("this is later data------>",data)
+        console.log(resolve)
+        displayData(data)
+     })
+     .catch(function(err){
+       console.error(err);
+     })
+
+     function displayData(data){
+        data.forEach(ele => {
+            let div = document.createElement("div");
+        
+            let emailElement = document.createElement("p")
+            emailElement.textContent = ele.email;
+            let name = document.createElement("p")
+            name.textContent = ele.firts_name +" "+ ele.last_name;
+            let avatar = document.createElement("img")
+            avatar.src = ele.avatar;
+            div.append(emailElement, name, avatar)
+            container.append(div)
+        });
+        
+     }
+    
+</script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // let myPromise = new Promise(function(resolve, reject){
+       
+    // })
+    // console.log(myPromise);
+    // let myPromise = new Promise(function(resolve, reject){
+    // //    resolve("I'm done")
+    // reject("Broken Promise")
+    // })
+    // console.log(myPromise)
+    let isNetworkRequestSuccessful = false;
+    let myPromise = new Promise(function(resolve, reject){
+       setTimeout(function(){
+        if(isNetworkRequestSuccessful){
+        resolve({ data: { id: 1 }, error: false })
+       }
+       else{
+        reject({ data: null, error: true })
+       }
+       }, 1000)
+    })
+    console.log(myPromise)
+    myPromise.then(function(res){
+      console.log(res);
+    })
+    .catch(function(err){
+       console.log(err);
+    })
+</script>
+</html>
