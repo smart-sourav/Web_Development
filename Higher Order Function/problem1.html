@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Problem 1: Find the average of elements present at odd index of the following array.
+    let arr = [10, 24, 56, 72, -10, -88, 100, 564]; -->
+    
+</body>
+<script>
+    let arr = [10, 24, 56, 72, -10, -88, 100, 564]
+    let sum = 0;
+    let count = 0;
+    arr.reduce(function(total, currentvalue, currentindex, arr){
+       if(currentindex % 2 != 0){
+          sum = sum + currentvalue;
+          count++
+       }
+    }, 0)
+    console.log(sum/count)
+   
+    
+    // function myFunction(){
+    //     let oddSum = 0;
+    //     for(let i=0; i<arr.length; i++){
+    //         if(i % 2 != 0){
+    //            oddSum = oddSum + arr[i]
+    //         }
+    //     }
+    //     let average = oddSum/2;
+    //     console.log(average);
+    // }
+    // // arr.reduce(myFunction);
+    // myFunction();
+</script>
+</html>
