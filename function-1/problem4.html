@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>
+    Write code to calculate the average of an array
+    If there are no items in the array it should return 0
+    NOTE: Create a function to find the sum of elements in an array and use that function to find out the average 
+    </h2>
+    
+</body>
+<script>
+    let arr = [10, 20, 15, 25, 30]
+    let numberOfElements = arr.length;
+    function sumOfElements(arr){
+        let sum;
+        if(numberOfElements == 0){
+            sum = 0;
+        } else{
+            
+        for(let i=0; i<numberOfElements; i++){
+            sum = sum + arr[i];
+        }
+        }
+        return sum;
+    }
+  console.log(sumOfElements())
+
+</script>
+</html>

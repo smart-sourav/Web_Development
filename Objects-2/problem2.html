@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>
+        Problem-2 Grade Student Marks
+    </h2>
+    <ul>
+        <li>Given an object of student grades and their marks in the mentioned below format, print the highest scored student for each grade along with the total</li>
+        <li>Sample Input</li>
+    </ul>
+    <p>
+        [
+	{
+		grade: "V",
+		students: [
+			{name: "Nrupul", marks: [10, 20, 30]},
+			{name: "Prateek", marks: [20, 30, 40]}
+		]
+	},
+	{
+		grade: "VI",
+		students: [
+			{name: "Aman", marks: [10, 20, 30]},
+			{name: "Albert", marks: [20, 30, 40]}
+		]
+	},
+	{
+		grade: "VII",
+		students: [
+			{name: "Yogesh", marks: [10, 20, 30]},
+			{name: "Sandhya", marks: [20, 30, 40]}
+		]
+	}
+]
+    </p>
+    <h3>
+        Sample Output
+    </h3>
+    <p>V-Prateek-90</p>
+    <p> VI-Albert-90</p>
+    <p>VII-Sandhya-90</p>
+</body>
+<script>
+    let studentDetails = [
+	{
+		grade: "V",
+		students: [
+			{name: "Nrupul", marks: [10, 20, 30]},
+			{name: "Prateek", marks: [20, 30, 40]}
+		]
+	},
+	{
+		grade: "VI",
+		students: [
+			{name: "Aman", marks: [10, 20, 30]},
+			{name: "Albert", marks: [20, 30, 40]}
+		]
+	},
+	{
+		grade: "VII",
+		students: [
+			{name: "Yogesh", marks: [10, 20, 30]},
+			{name: "Sandhya", marks: [20, 30, 40]}
+		]
+	}
+]
+// console.log(studentDetails[0])
+// console.log(studentDetails[0].grade)
+// console.log(studentDetails[0].students)
+// console.log(studentDetails[0].students[0].marks[0])
+let studentList = [];
+for(let i=0; i<studentDetails.length; i++){
+    // console.log(studentDetails[i]);
+    studentList.push(studentDetails[i])
+}
+console.log(studentList);
+for(let i=0; i<studentList.length; i++){
+    console.log(studentList[i].students[i])
+}
+</script>
+</html>
